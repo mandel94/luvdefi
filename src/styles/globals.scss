@@ -1,0 +1,78 @@
+// Styling for generic UI components (Home, Cards, Buttons, etc...)  
+@import 'index';
+
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.flex-container {
+  display: flex;
+}
+
+.grid-container {
+  display: grid;
+}
+
+#home-grid-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+#intro {
+  font-family: 'Bungee Spice', cursive;
+  text-align: center;
+  h1 {
+    font-size: 3rem;
+  }
+}
+
+.card {
+  // Container rules
+  display: flex;
+  flex-direction: column;
+  // Grid item rules
+  justify-self: center;
+  align-self: center;
+
+  .button {
+    // Layout
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .connect-logo {
+      // Layout
+      display: inline-block;
+      height: 20px;
+      margin-left: 10px;
+    }
+  }
+}
+
+@media screen and (min-width: 480px) {
+
+  #home-grid-container {
+    display: grid;
+    grid-template-columns: [start-col] 1fr [first-col] 1fr [second-col] 1fr [end-col];
+    grid-template-rows: auto auto auto;
+    gap: 50px;
+
+
+    #intro {
+      grid-column: start-col / end-col;
+      justify-self: center;
+    }
+  }
+
+  .card {
+    grid-column: start-col / end-col;
+    .button {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+}

@@ -1,0 +1,55 @@
+// Styling for generic UI components (Home, Cards, Buttons, etc...)  
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.flex-container {
+  display: flex;
+}
+
+.grid-container {
+  display: grid;
+}
+
+#home-grid-container {
+  display: grid;
+  grid-template-columns: [start-col] 1fr [first-col] 1fr [second-col] 1fr [end-col];
+}
+
+.connect-card {
+  // Grid item rules
+  grid-column: first-col / second-col;
+  // Container rules
+  justify-self: center;
+
+  .button-connect {
+    // Layout
+    display: flex;
+
+    .connect-logo {
+      // Layout
+      display: inline-block;
+      height: 20px;
+      margin-left: 10px;
+    }
+  }
+}
+
+// Media queries
+@media (max-width: 780px) {
+  .connect-card {
+    flex-direction: column;
+
+    .button-connect {
+      flex-direction: column;
+      align-items: center;
+
+      .connect-logo {
+        // Set vertical padding to logo when layout is flex-columns
+        margin-top: 10px;
+      }
+    }
+  }
+}
