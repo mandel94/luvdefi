@@ -1,0 +1,6 @@
+@use '../themes/theme';
+
+$connect-button-bg: theme.$button-props(#{theme.$selected-theme}, 'connect-button-bg'); 
+
+// $connect-button-bg: #3772ff;
+

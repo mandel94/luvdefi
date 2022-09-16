@@ -22,7 +22,10 @@ export default function App() {
         <Intro>
           LUVDEFI
         </Intro>
-        <ConnectCard className='card'>
+        <ConnectCard>
+          <Image src='/streamlinehq-cryptowallets-web-3.0-400.PNG'
+                 alt="" title="" width="100%" height="100%" layout="responsive" objectFit="contain"
+                 />
           <Button>
             Connect to MetaMask!
             <Image src='/Metamask-icon.svg'

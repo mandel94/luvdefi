@@ -1,5 +1,7 @@
-// Styling for generic UI components (Home, Cards, Buttons, etc...)  
-@import 'index';
+// Styling for generic UI components (Home, Cards, Buttons, etc...)
+@use 'components/card'; 
+@use 'components/button';
+@import 'main';
 
 
 * {
@@ -37,12 +39,20 @@
   // Grid item rules
   justify-self: center;
   align-self: center;
+  border: 2px solid #ccc;
+  border-radius: card.$border-radius;
+
+  & > * {
+    margin: 10px auto;
+  }
 
   .button {
     // Layout
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-radius: card.$border-radius;
+    background-color: button.$connect-button-bg;
 
     .connect-logo {
       // Layout

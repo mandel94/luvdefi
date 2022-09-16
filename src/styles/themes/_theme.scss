@@ -1,0 +1,25 @@
+// Selected theme
+$selected-theme: 'default-theme';
+
+// Themes definitions
+$default-theme: ("connect-button-bg": #3772ff, 
+                 "connect-button-txt-color": #FFF);  
+
+// Map of themes
+$theme-maps: ('default-theme', $default-theme);
+
+
+// Getting properties
+
+// Buttons
+// Example --> button-props('default-theme', 'bg')
+@function button-props($theme, $prop) {
+    // Get theme out of map of themes
+    $theme-props: map.get($theme-maps, #{$theme});
+    // Get property out of theme
+    @return map.get($theme-props, #{$prop});
+}
+
+
+
+

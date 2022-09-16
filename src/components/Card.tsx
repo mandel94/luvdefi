@@ -5,7 +5,7 @@ export default function Card (props: CardProps) {
     const { children } = props;
     return (
         <>
-            <div {...props }>
+            <div className='card' {...props }>
                 {children}
             </div>
         </>
